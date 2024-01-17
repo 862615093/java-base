@@ -3,7 +3,7 @@ package com.ww.se.staticStudy;
 
 //        原文链接：https://blog.csdn.net/weixin_44325444/article/details/109273226
 
-//        首先static的成员是在类加载的时候初始化的，JVM的CLASSLOADER的加载，首次主动使用加载，而非static的成员是在创建对象的时候，即new 操作的时候才初始化的；
+//        首先static的成员是在类加载的时候初始化的，JVM的CLASSLOADER的加载，首次主动使用加载，而非static的成员是在创建对象的时候，即非new 操作的时候才初始化的；
 //        先后顺序是先加载，才能初始化，那么加载的时候初始化static的成员，此时非static的成员还没有被加载必然不能使用，而非static的成员是在类加载之后，
 //        通过new操作符创建对象的时候初始化，此时static 已经分配内存空间，所以可以访问！
 //        简单点说：静态成员属于类,不需要生成对象就存在了.而非静态需要生成对象才产生.所以静态成员不能直接访问非静态.
