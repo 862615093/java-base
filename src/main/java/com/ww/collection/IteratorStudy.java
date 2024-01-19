@@ -1,4 +1,4 @@
-package com.ww.collectionStudy;
+package com.ww.collection;
 
 import java.util.*;
 

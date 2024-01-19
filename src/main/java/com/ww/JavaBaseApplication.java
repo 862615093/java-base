@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class FunctionalProgramDemo {
+public class JavaBaseApplication {
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(FunctionalProgramDemo.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(JavaBaseApplication.class, args);
     }
 }
