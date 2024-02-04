@@ -1,0 +1,4 @@
+com.ww.frame.springboot.autoConfig.AutoConfigDemo$MyImportSelector=\
+com.ww.frame.springboot.autoConfig.AutoConfigDemo.AutoConfiguration1,\
+com.ww.frame.springboot.autoConfig.AutoConfigDemo.AutoConfiguration2
+
