@@ -1,7 +1,7 @@
-package com.ww.frame.spring.transactional.moreThreadTransaction.service;
+package com.ww.spring.transactional.moreThreadTransaction.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.ww.frame.spring.transactional.moreThreadTransaction.Employee;
+import com.ww.spring.transactional.moreThreadTransaction.Employee;
 
 import java.sql.SQLException;
 import java.util.List;

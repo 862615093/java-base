@@ -1,4 +1,4 @@
-package com.ww.frame.spring.aop.cglib;
+package com.ww.spring.aop.cglib;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;

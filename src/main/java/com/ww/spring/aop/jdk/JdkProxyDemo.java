@@ -1,4 +1,4 @@
-package com.ww.frame.spring.aop.jdk;
+package com.ww.spring.aop.jdk;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;

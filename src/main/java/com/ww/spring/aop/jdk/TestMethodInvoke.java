@@ -1,4 +1,4 @@
-package com.ww.frame.spring.aop.jdk;
+package com.ww.spring.aop.jdk;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

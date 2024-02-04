@@ -1,4 +1,4 @@
-package com.ww.frame.spring.aop.cglib;
+package com.ww.spring.aop.cglib;
 
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;

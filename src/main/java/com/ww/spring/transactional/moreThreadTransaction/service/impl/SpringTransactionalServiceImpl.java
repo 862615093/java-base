@@ -1,11 +1,11 @@
-package com.ww.frame.spring.transactional.moreThreadTransaction.service.impl;
+package com.ww.spring.transactional.moreThreadTransaction.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.ww.frame.spring.transactional.moreThreadTransaction.Employee;
 import com.ww.frame.spring.transactional.moreThreadTransaction.ExecutorConfig;
-import com.ww.frame.spring.transactional.moreThreadTransaction.SqlContext;
-import com.ww.frame.spring.transactional.moreThreadTransaction.mapper.SpringTransactionalMapper;
-import com.ww.frame.spring.transactional.moreThreadTransaction.service.ISpringTransactionalService;
+import com.ww.spring.transactional.moreThreadTransaction.Employee;
+import com.ww.spring.transactional.moreThreadTransaction.SqlContext;
+import com.ww.spring.transactional.moreThreadTransaction.mapper.SpringTransactionalMapper;
+import com.ww.spring.transactional.moreThreadTransaction.service.ISpringTransactionalService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;

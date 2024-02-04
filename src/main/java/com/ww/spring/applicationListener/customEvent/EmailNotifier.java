@@ -1,4 +1,4 @@
-package com.ww.frame.spring.applicationListener.customEvent;
+package com.ww.spring.applicationListener.customEvent;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
