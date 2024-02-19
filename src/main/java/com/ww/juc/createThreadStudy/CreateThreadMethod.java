@@ -8,6 +8,7 @@ public class CreateThreadMethod {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        MyThread thread = new MyThread();
+
 //        MyRunnable thread = new MyRunnable();
 //        thread.start();
 

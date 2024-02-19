@@ -1,4 +1,4 @@
-package com.ww.frame.springboot.runner;
+package com.ww.springboot.runner;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

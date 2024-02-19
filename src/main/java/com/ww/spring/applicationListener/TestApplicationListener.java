@@ -1,6 +1,6 @@
-package com.ww.frame.spring.applicationListener;
+package com.ww.spring.applicationListener;
 
-import com.ww.frame.spring.applicationListener.customEvent.EmailEvent;
+import com.ww.spring.applicationListener.customEvent.EmailEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;

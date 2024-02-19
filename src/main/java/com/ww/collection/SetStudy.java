@@ -7,7 +7,8 @@ import java.util.Set;
 
 public class SetStudy {
     public static void main(String[] args) {
-//        hashSetTest();
+        hashSetTest();
+        System.out.println("==================================");
         linkedHashSetTest();
     }
 

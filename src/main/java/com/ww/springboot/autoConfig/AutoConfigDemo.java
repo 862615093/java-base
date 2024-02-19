@@ -1,4 +1,4 @@
-package com.ww.frame.springboot.autoConfig;
+package com.ww.springboot.autoConfig;
 
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.support.SpringFactoriesLoader;

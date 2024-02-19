@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: frame-demo
+    name: java-base
   #mysql
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/frame-demo?useSSL=false
@@ -52,10 +52,10 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
-  type-aliases-package: com.ww.frame
+  type-aliases-package: com.ww
 
 logging:
   level:
-    com.ww.frame: debug
+    com.ww: debug
   pattern:
     dateformat: HH:mm:ss:SSS
