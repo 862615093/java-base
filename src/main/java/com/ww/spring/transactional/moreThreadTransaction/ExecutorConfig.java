@@ -1,4 +1,4 @@
-package com.ww.frame.spring.transactional.moreThreadTransaction;
+package com.ww.spring.transactional.moreThreadTransaction;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;

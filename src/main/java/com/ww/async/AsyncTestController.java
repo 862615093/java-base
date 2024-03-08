@@ -25,7 +25,7 @@ public class AsyncTestController {
 //    2、异步方法使用注解@Async的返回值只能为void或者Future。
 //    3、没有走Spring的代理类。
 //    4、非public方法 （对于private方法，由于子类无法访问，也就无法进行代理。通过这里的方法，找到了生成的代理类字节码，发现里面也没有对父类的private字段与方法进行覆盖。）
-//    5、尽量避免使用默认使用的线程池是SimpleAsyncTaskExecutor
+//    5、尽量避免使用默认使用的线程池是SimpleAsyncTaskExecutor（坑：为每个任务新起一个线程，默认线程数不做限制，不复用线程）
 
 //    @Async注解使用细节
 //    @Async注解一般用在方法上，如果用在类上，那么这个类所有的方法都是异步执行的；
