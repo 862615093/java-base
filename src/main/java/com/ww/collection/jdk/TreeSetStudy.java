@@ -1,4 +1,4 @@
-package com.ww.collection;
+package com.ww.collection.jdk;
 
 import java.util.Comparator;
 import java.util.TreeSet;

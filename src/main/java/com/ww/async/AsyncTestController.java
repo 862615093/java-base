@@ -1,7 +1,6 @@
 package com.ww.async;
 
 import cn.hutool.extra.spring.SpringUtil;
-import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@Api(tags = {"@Async注解失效问题的分析与解决方案"})
+//@Api(tags = {"@Async注解失效问题的分析与解决方案"})
 @RequestMapping("/async")
 public class AsyncTestController {
 

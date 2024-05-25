@@ -4,7 +4,32 @@ server:
 spring:
   application:
     name: java-base
-  #mysql
+
+  profiles:
+    active: mq
+
+
+# spring-doc-openapi项目配置
+spring-doc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: '默认分组'
+      paths-to-match: '/**'
+      packages-to-scan: com.ww.springcloud
+
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    enable-footer: false
+
+
+#mysql
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/frame-demo?useSSL=false
 #    username: root
@@ -46,13 +71,11 @@ spring:
 #            max-lifetime: 900000
 #          type: com.zaxxer.hikari.HikariDataSource
 
-
-
-mybatis-plus:
-  configuration:
-    map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
-  type-aliases-package: com.ww
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+#  type-aliases-package: com.ww
 
 logging:
   level:
