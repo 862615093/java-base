@@ -1,4 +1,4 @@
-package com.ww.collection.guava.bitmap;
+package com.ww.utils.guava.collection.bitmap;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;  

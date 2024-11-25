@@ -1,4 +1,4 @@
-package com.ww.collection.guava.immutable;
+package com.ww.utils.guava.collection.immutable;
 
 import com.google.common.collect.ImmutableMultiset;
 import com.google.common.collect.ImmutableMultimap;  

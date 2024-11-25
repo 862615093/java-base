@@ -1,4 +1,4 @@
-package com.ww.collection.guava.immutable;
+package com.ww.utils.guava.collection.immutable;
 
 import com.google.common.collect.ImmutableSortedSet;
 import com.google.common.collect.ImmutableSortedMap;  

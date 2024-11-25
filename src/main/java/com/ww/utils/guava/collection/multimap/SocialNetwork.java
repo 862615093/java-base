@@ -1,4 +1,4 @@
-package com.ww.collection.guava.multimap;
+package com.ww.utils.guava.collection.multimap;
 
 import com.google.common.collect.*;
   
