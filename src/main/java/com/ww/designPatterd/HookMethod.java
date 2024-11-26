@@ -16,7 +16,7 @@ package com.ww.designPatterd;
  * 提取公共部分代码，便于维护
  * 行为由父类控制，子类实现
  */
-public class HookMethodStudy { //https://blog.csdn.net/qq_39132177/article/details/109441230
+public class HookMethod { //https://blog.csdn.net/qq_39132177/article/details/109441230
 
     /**
      * 抽象类，定义模板方法和基本方法
