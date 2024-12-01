@@ -10,6 +10,19 @@ import java.util.regex.Pattern;
  */
 public class RegGrammar {
 
+    public static void main(String[] args) {
+        int a = 8;
+
+        if (a > 3) {
+            System.out.println("11111");
+        } else if (a > 5) {
+            System.out.println("22222");
+        } else {
+            System.out.println("33333");
+        }
+        System.out.println("4444");
+    }
+
     /**
      * 正则转义符 //
      *
