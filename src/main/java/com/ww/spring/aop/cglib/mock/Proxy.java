@@ -1,11 +1,11 @@
-package com.ww.spring.aop.cglib;
+package com.ww.spring.aop.cglib.mock;
 
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.UndeclaredThrowableException;
-
+//代理类
 public class Proxy extends Target {
 
     private MethodInterceptor methodInterceptor;
@@ -20,6 +20,8 @@ public class Proxy extends Target {
     static MethodProxy save0Proxy;
     static MethodProxy save1Proxy;
     static MethodProxy save2Proxy;
+
+
     static {
         try {
             save0 = Target.class.getMethod("save");

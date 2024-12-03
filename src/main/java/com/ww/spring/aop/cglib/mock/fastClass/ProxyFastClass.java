@@ -1,8 +1,18 @@
-package com.ww.spring.aop.cglib;
+package com.ww.spring.aop.cglib.mock.fastClass;
 
+import com.ww.spring.aop.cglib.mock.Proxy;
 import org.springframework.cglib.core.Signature;
 
 public class ProxyFastClass {
+
+    public static void main(String[] args) {
+        ProxyFastClass fastClass = new ProxyFastClass();
+        int index = fastClass.getIndex(new Signature("saveSuper", "()V"));
+        System.out.println(index);
+
+        fastClass.invoke(index, new Proxy(), new Object[0]);
+    }
+
     static Signature s0 = new Signature("saveSuper", "()V");
     static Signature s1 = new Signature("saveSuper", "(I)V");
     static Signature s2 = new Signature("saveSuper", "(J)V");
@@ -40,13 +50,5 @@ public class ProxyFastClass {
         } else {
             throw new RuntimeException("无此方法");
         }
-    }
-
-    public static void main(String[] args) {
-        ProxyFastClass fastClass = new ProxyFastClass();
-        int index = fastClass.getIndex(new Signature("saveSuper", "()V"));
-        System.out.println(index);
-
-        fastClass.invoke(index, new Proxy(), new Object[0]);
     }
 }

@@ -1,5 +1,6 @@
-package com.ww.spring.aop.cglib;
+package com.ww.spring.aop.cglib.mock.fastClass;
 
+import com.ww.spring.aop.cglib.mock.Target;
 import org.springframework.cglib.core.Signature;
 
 public class TargetFastClass {

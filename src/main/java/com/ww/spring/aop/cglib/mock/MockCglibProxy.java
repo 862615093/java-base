@@ -1,4 +1,4 @@
-package com.ww.spring.aop.cglib;
+package com.ww.spring.aop.cglib.mock;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;
@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  * cglib动态代理原理
  */
 @Slf4j
-public class CglibProxyPrinciple {
+public class MockCglibProxy {
 
     public static void main(String[] args) throws IOException {
         Proxy proxy = new Proxy();
@@ -19,11 +19,14 @@ public class CglibProxyPrinciple {
         proxy.setMethodInterceptor(new MethodInterceptor() {
             @Override
             public Object intercept(Object p, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+
                 System.out.println("1... before...");
 //                return method.invoke(target, args); // 反射调用
+
                 // FastClass
-                return methodProxy.invoke(target, args); // 内部无反射, 结合目标用
-//                return methodProxy.invokeSuper(p, args); // 内部无反射, 结合代理用
+                return methodProxy.invoke(target, args); // 内部无反射, 结合目标类用
+
+//                return methodProxy.invokeSuper(p, args); // 内部无反射, 结合代理类用
             }
         });
         proxy.save();

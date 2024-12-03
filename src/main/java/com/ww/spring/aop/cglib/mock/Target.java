@@ -1,4 +1,4 @@
-package com.ww.spring.aop.cglib;
+package com.ww.spring.aop.cglib.mock;
 
 //cglib需要代理的目标类
 public class Target {
