@@ -1,4 +1,4 @@
-package com.ww.designPatterd;
+package com.ww.designPatterd.template;
 
 import java.util.ArrayList;
 import java.util.List;
