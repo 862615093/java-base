@@ -1,4 +1,4 @@
-package com.ww.springmvc.controllerAdvice;
+package springmvc.controllerAdvice;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 // 指定增强S001LoginController和S002LogoutController

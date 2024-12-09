@@ -1,4 +1,4 @@
-package com.ww.springmvc.controllerAdvice;
+package springmvc.controllerAdvice;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

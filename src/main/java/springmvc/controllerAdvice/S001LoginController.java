@@ -1,4 +1,4 @@
-package com.ww.springmvc.controllerAdvice;
+package springmvc.controllerAdvice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
