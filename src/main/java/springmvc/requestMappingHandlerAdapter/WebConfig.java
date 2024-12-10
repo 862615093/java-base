@@ -10,6 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import java.util.List;
+
 @Configuration
 @ComponentScan
 public class WebConfig {
@@ -52,7 +54,12 @@ public class WebConfig {
      */
     @Bean
     public MyRequestMappingHandlerAdapter myRequestMappingHandlerAdapter() {
-        return new MyRequestMappingHandlerAdapter();
+        TokenArgumentResolver tokenArgumentResolver = new TokenArgumentResolver();
+        MyRequestMappingHandlerAdapter adapter = new MyRequestMappingHandlerAdapter();
+        adapter.setCustomArgumentResolvers(List.of(tokenArgumentResolver)); // 加入参数解析器
+        YmlReturnValueHandler ymlReturnValueHandler = new YmlReturnValueHandler();
+        adapter.setCustomReturnValueHandlers(List.of(ymlReturnValueHandler)); // 加入返回值解析器
+        return adapter;
     }
 
 }

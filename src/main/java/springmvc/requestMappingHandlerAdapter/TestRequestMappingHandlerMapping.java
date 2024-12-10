@@ -9,6 +9,7 @@ import org.springframework.web.servlet.HandlerExecutionChain;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 @Slf4j
@@ -37,6 +38,20 @@ public class TestRequestMappingHandlerMapping {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         handlerAdapter.invokeHandlerMethod(request, response, ((HandlerMethod) handlerMapping.getHandler(request).getHandler()));
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+        // 测试自定义参数解析器
+        MockHttpServletRequest tokenRequest = new MockHttpServletRequest("PUT", "/test3");
+        tokenRequest.addHeader("token", "token info");
+        handlerAdapter.invokeHandlerMethod(tokenRequest, response, ((HandlerMethod) handlerMapping.getHandler(tokenRequest).getHandler()));
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+        // 测试自定义返回值解析器
+        MockHttpServletRequest test4Req = new MockHttpServletRequest("GET", "/test4");
+        handlerAdapter.invokeHandlerMethod(test4Req, response, ((HandlerMethod) handlerMapping.getHandler(test4Req).getHandler()));
+        byte[] content = response.getContentAsByteArray();
+        System.out.println(new String(content, StandardCharsets.UTF_8));
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
     }
 
 

@@ -24,12 +24,13 @@ public class Controller1 {
     }
 
     @PutMapping("/test3")
-    public ModelAndView test3(String token) {
+    public ModelAndView test3(@Token String token) {
         log.debug("test3({})", token);
         return null;
     }
 
     @RequestMapping("/test4")
+    @Yml
     public User test4() {
         log.debug("test4");
         return new User("张三", 18);
