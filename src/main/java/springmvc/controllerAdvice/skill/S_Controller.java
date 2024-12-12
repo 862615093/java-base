@@ -1,4 +1,4 @@
-package springmvc.controllerAdvice;
+package springmvc.controllerAdvice.skill;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
