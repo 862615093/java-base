@@ -1,4 +1,4 @@
-package com.ww.designPatterd;
+package com.ww.designPatterd.hook;
 
 /**
  * 钩子方法源于设计模式中模板方法（Template Method）模式，模板方法模式的概念为：
