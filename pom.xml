@@ -44,11 +44,16 @@
 
     <dependencies>
 
-        <!--web开发包-->
+        <!-- web相关开发包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
 
         <!-- MQ 相关 -->
 
