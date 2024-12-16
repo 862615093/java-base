@@ -1,4 +1,4 @@
-package springmvc.exceptionHandler;
+package springmvc.exceptionHandler.exceptionHandlerExceptionResolver;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

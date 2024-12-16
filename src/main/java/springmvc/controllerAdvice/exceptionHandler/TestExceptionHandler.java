@@ -33,6 +33,10 @@ public class TestExceptionHandler {
 //    }
 
 
+    /**
+     * 控制器中被 @ExceptionHandler 标记的异常处理方法只会在当前控制器中生效，
+     * 如果想要某个异常处理方法全局生效，则需要将异常处理方法编写在被 @ControllerAdvice 注解标记的类中。
+     */
     @SneakyThrows
     public static void main(String[] args) {
         MockHttpServletRequest request = new MockHttpServletRequest();

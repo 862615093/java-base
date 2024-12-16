@@ -14,6 +14,7 @@ import java.util.Map;
 @Configuration
 public class WebConfig {
 
+
     @ControllerAdvice
     static class MyControllerAdvice {
         @ExceptionHandler
