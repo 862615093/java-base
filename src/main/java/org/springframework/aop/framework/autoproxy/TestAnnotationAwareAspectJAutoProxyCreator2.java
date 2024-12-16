@@ -19,7 +19,13 @@ import javax.annotation.PostConstruct;
 @Slf4j
 public class TestAnnotationAwareAspectJAutoProxyCreator2 {
 
-
+    /**
+     * 使用 AnnotationAwareAspectJAutoProxyCreator Bean 后置处理器创建代理对象的时机有以下两个选择：
+     * <p>
+     * Bean 的依赖注入之前
+     * Bean 初始化完成之后
+     * 这两个时机二选一，不会重复创建代理对象。
+     */
     public static void main(String[] args) {
         GenericApplicationContext context = new GenericApplicationContext();
         context.registerBean(ConfigurationClassPostProcessor.class);
@@ -83,10 +89,13 @@ public class TestAnnotationAwareAspectJAutoProxyCreator2 {
     }
 
     static class Bean1 {
-        public void foo() {}
+        public void foo() {
+        }
+
         public Bean1() {
             System.out.println("Bean1()");
         }
+
         @PostConstruct
         public void init() {
             System.out.println("Bean1 init()");
@@ -97,10 +106,12 @@ public class TestAnnotationAwareAspectJAutoProxyCreator2 {
         public Bean2() {
             System.out.println("Bean2()");
         }
+
         @Autowired
         public void setBean1(Bean1 bean1) {
             System.out.println("Bean2 setBean1(bean1) class is: " + bean1.getClass());
         }
+
         @PostConstruct
         public void init() {
             System.out.println("Bean2 init()");

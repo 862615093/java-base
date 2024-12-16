@@ -1,12 +1,12 @@
 <aspectj>
     <aspects>
         <!--    切面类全限定类名    -->
-        <aspect name="com.ww.spring.aop.agent.MyAspect"/>
+        <aspect name="frame.spring.aop.agent.MyAspect"/>
         <weaver options="-verbose -showWeaveInfo">
             <!--      被增强方法所在类的全限定类名      -->
-            <include within="com.ww.spring.aop.agent.MyService"/>
+            <include within="frame.spring.aop.agent.MyService"/>
             <!--    切面类全限定类名    -->
-            <include within="com.ww.spring.aop.agent.MyAspect"/>
+            <include within="frame.spring.aop.agent.MyAspect"/>
         </weaver>
     </aspects>
 </aspectj>
