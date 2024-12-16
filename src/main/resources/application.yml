@@ -3,6 +3,10 @@
 server:
   port: 8888
 
+  # 返回的数据中并没有显示异常信息，可以通过配置文件进行配置
+#  error:
+#    include-exception: true
+
 #  servlet:
 #    session:
 #      timeout: 10
