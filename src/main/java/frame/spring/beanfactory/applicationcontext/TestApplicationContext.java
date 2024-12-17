@@ -1,4 +1,4 @@
-package frame.spring.applicationcontext;
+package frame.spring.beanfactory.applicationcontext;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean;
@@ -16,12 +16,17 @@ import org.springframework.web.servlet.mvc.Controller;
 @Slf4j
 public class TestApplicationContext {
 
-          /*
-                学到了什么
-                a. 常见的 ApplicationContext 容器实现
-                b. 内嵌容器、DispatcherServlet 的创建方法、作用
-          */
-
+    /**
+     * 学到了什么
+     *      a. 常见的 ApplicationContext 容器实现类：
+     *          例如： ClassPathXmlApplicationContext、FileSystemXmlApplicationContext、AnnotationConfigApplicationContext、AnnotationConfigServletWebServerApplicationContext
+     *      b. 内嵌容器、DispatcherServlet 的创建方法、作用
+     *      c. applicationContext 除了继承 BeanFactory 外，还继承了：
+     *          MessageSource：使其具备处理国际化资源的能力
+     *          ResourcePatternResolver：使其具备使用通配符进行资源匹配的能力
+     *          EnvironmentCapable：使其具备读取 Spring 环境信息、配置文件信息的能力
+     *          ApplicationEventPublisher：使其具备发布事件的能力
+     */
     public static void main(String[] args) {
 //        testClassPathXmlApplicationContext();
 //        testFileSystemXmlApplicationContext();

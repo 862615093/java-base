@@ -14,6 +14,8 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 public class TestBeanFactory {
 
+
+
     public static void main(String[] args) {
 
         // DefaultListableBeanFactory 作为 BeanFactory 最重要的实现类
@@ -21,14 +23,19 @@ public class TestBeanFactory {
 
         // bean 的定义（class, scope, 初始化, 销毁）
         AbstractBeanDefinition beanDefinition =
-                BeanDefinitionBuilder.genericBeanDefinition(Config.class).setScope("singleton").getBeanDefinition();
+                BeanDefinitionBuilder
+                        .genericBeanDefinition(Config.class)
+                        .setScope("singleton")
+                        .getBeanDefinition();
+
         beanFactory.registerBeanDefinition("config", beanDefinition);
 
         // 给 BeanFactory 添加一些常用的  BeanFactory后处理器
         AnnotationConfigUtils.registerAnnotationConfigProcessors(beanFactory);
 
         // BeanFactory后处理器主要功能：补充了一些 bean 定义（说白了就是BeanFactory的增强功能,例如：internalConfigurationAnnotationProcessor）
-        beanFactory.getBeansOfType(BeanFactoryPostProcessor.class).values().forEach(beanFactoryPostProcessor -> {
+        beanFactory.getBeansOfType(BeanFactoryPostProcessor.class).values()
+                .forEach(beanFactoryPostProcessor -> {
             log.debug("{}", beanFactoryPostProcessor);
             beanFactoryPostProcessor.postProcessBeanFactory(beanFactory);
         });
@@ -38,8 +45,9 @@ public class TestBeanFactory {
 
         // Bean 后处理器 （例如：internalAutowiredAnnotationProcessor、internalCommonAnnotationProcessor）,
         // 作用： 针对 bean 的生命周期的各个阶段提供扩展, 例如 @Autowired @Resource ...
+        // internalAutowiredAnnotationProcessor 和 internalCommonAnnotationProcessor 的两个后置处理器。前者用于解析 @Autowired 注解，后者用于解析 @Resource 注解，添加到 BeanFactory 中的后置处理器里
         beanFactory.getBeansOfType(BeanPostProcessor.class).values().stream()
-                .sorted(beanFactory.getDependencyComparator())
+//                .sorted(beanFactory.getDependencyComparator())
                 .forEach(beanPostProcessor -> {
                     System.out.println("beanPostProcessor >>>> " + beanPostProcessor);
                     beanFactory.addBeanPostProcessor(beanPostProcessor);

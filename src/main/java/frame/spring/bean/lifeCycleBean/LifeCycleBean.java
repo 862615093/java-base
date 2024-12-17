@@ -13,7 +13,7 @@ import javax.annotation.PreDestroy;
 public class LifeCycleBean {
 
     public LifeCycleBean() {
-        log.debug("1、构造（实例化）");
+        log.debug("1、构造、创建（实例化）");
     }
 
     @Autowired
