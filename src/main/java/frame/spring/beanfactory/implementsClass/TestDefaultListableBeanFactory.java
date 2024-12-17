@@ -29,10 +29,17 @@ public class TestDefaultListableBeanFactory {
      *        例如：DefaultListableBeanFactory 实现了 BeanFactory 接口，它能管理 Spring 中所有的 Bean，当然也包含 Spring 容器中的那些单例对象。
      *             DefaultListableBeanFactory 还继承了 DefaultSingletonBeanRegistry 类，这个类就是用来管理 Spring 容器中的单例对象。
      *
-     * 3、beanFactory 不会做的事
+     * 3、beanFactory 不会做的事？
      *    1） 不会主动调用 BeanFactory 后处理器
      *    2） 不会主动添加 Bean 后处理器
      *    3） 不会主动初始化单例
+     *
+     * 4、BeanFactory 接口体系：
+     *    1） ListableBeanFactory：提供获取 Bean 集合的能力，比如一个接口可能有多个实现，通过该接口下的方法就能获取某种类型的所有 Bean。
+     *    2） HierarchicalBeanFactory：Hierarchical 意为“层次化”，通常表示一种具有层级结构的概念或组织方式，这种层次化结构可以通过父子关系来表示对象之间的关联，比如树、图、文件系统、组织架构等。根据该接口下的方法可知，能够获取到父容器，说明 BeanFactory 有父子容器概念；
+     *    3） AutowireCapableBeanFactory：提供了创建 Bean、自动装配 Bean、属性填充、Bean 初始化、依赖注入等能力，比如 @Autowired 注解的底层实现就依赖于该接口的 resolveDependency() 方法；
+     *    4） ConfigurableBeanFactory：该接口并未直接继承至 BeanFactory，而是继承了 HierarchicalBeanFactory。Configurable 意为“可配置的”，就是说该接口用于对 BeanFactory 进行一些配置，比如设置类型转换器。
+     *
      *
      */
     public static void main(String[] args) {

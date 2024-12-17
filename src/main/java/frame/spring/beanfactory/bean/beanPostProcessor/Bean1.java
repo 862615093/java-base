@@ -1,4 +1,4 @@
-package frame.spring.bean.beanPostProcessor;
+package frame.spring.beanfactory.bean.beanPostProcessor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

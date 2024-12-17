@@ -1,4 +1,4 @@
-package frame.spring.bean.beanPostProcessor;
+package frame.spring.beanfactory.bean.beanPostProcessor;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
