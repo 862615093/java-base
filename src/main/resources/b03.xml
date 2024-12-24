@@ -3,6 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bean4" class="frame.springboot.runner.run.Step8_11.Bean4"/>
+    <bean id="bean4" class="frame.springboot.runner.run.Step2_8_9_10_11_12.Bean4"/>
 
 </beans>
