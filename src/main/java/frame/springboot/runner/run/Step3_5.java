@@ -5,25 +5,23 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
-import org.springframework.core.env.Profiles;
-import org.springframework.core.env.StandardEnvironment;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.support.ResourcePropertySource;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 @Slf4j
 @SpringBootApplication
-public class Step3 {
+public class Step3_5 {
 
     /**
      * 第三步：准备 Environment
-     * Environment 即环境对象，是对配置信息的抽象，配置信息的来源有多种，比如：系统环境变量、properties 配置文件、YAML 配置文件 等等。
+     * Environment 即环境对象，是对配置信息的抽象，配置信息的来源有多种，比如：系统环境变量。
+     *
+     * 第五步：使用 EnvironmentPostProcessor 进行环境对象后置处理 ， 读取 properties 配置文件、YAML 配置文件
+     * 读取 properties、YAML 配置文件的源就是在第五步中添加的。
      *
      */
     public static void main(String[] args) throws IOException {
-        SpringApplication app = new SpringApplication(Step3.class);
+        SpringApplication app = new SpringApplication(Step3_5.class);
         ApplicationContext context = app.run(args);
         Environment environment = context.getEnvironment();
 
@@ -33,10 +31,6 @@ public class Step3 {
         // 获取 系统环境变量
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>" + environment.getProperty("JAVA_HOME"));
 
-        String[] defaultProfiles = environment.getDefaultProfiles();
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>" + Arrays.toString(defaultProfiles));
-        String[] activeProfiles = environment.getActiveProfiles();
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>" + Arrays.toString(activeProfiles));
     }
 
 

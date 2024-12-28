@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Step4 {
 
     /**
-     * 第四步：添加 ConfigurationPropertySources ---> 处理不规则的key
+     * 第四步：添加 ConfigurationPropertySources ---> 处理不规则的key （实现 松散绑定）
      *
      */
     public static void main(String[] args) throws IOException {
