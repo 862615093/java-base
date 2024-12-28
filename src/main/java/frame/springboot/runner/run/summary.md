@@ -26,7 +26,7 @@
 10、加载 Bean 定义
     发布 Application Prepared 事件 4️⃣
 
-11、refresh 容器
+11、refresh 容器 （比如：初始化tomcat容器）
     发布 Application Started 事件 5️⃣
 
 12、执行 Runner （ApplicationRunner、CommandLineRunner 接口）
